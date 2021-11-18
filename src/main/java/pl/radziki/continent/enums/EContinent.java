@@ -20,6 +20,6 @@ public enum EContinent {
         return Arrays.stream(values())
                 .filter(x -> x.name.equalsIgnoreCase(name))
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(IllegalArgumentException::new);
     }
 }
